@@ -1,0 +1,62 @@
+/*made with: http://twbscolor.smarchal.com/; permalink: http://twbscolor.smarchal.com/scss?bd=337ab7&bh=1e5685&cd=eeeeee&ch=dbefff */
+.navbar-mine {
+	background-color: #337ab7;
+	border-color: #1e5685;
+}
+.navbar-mine .navbar-brand {
+	color: #eeeeee;
+}
+.navbar-mine .navbar-brand:hover, .navbar-mine .navbar-brand:focus {
+	color: #dbefff;
+}
+.navbar-mine .navbar-text {
+	color: #eeeeee;
+}
+.navbar-mine .navbar-nav > li > a {
+	color: #eeeeee;
+}
+.navbar-mine .navbar-nav > li > a:hover, .navbar-mine .navbar-nav > li > a:focus {
+    background-color: #1e5685;    /*this I had to add or else it all went straight to ugly-town on hover*/
+	color: #dbefff;
+}
+.navbar-mine .navbar-nav > .active > a, .navbar-mine .navbar-nav > .active > a:hover, .navbar-mine .navbar-nav > .active > a:focus {
+	color: #dbefff;
+	background-color: #1e5685;
+}
+.navbar-mine .navbar-nav > .open > a, .navbar-mine .navbar-nav > .open > a:hover, .navbar-mine .navbar-nav > .open > a:focus {
+	color: #dbefff;
+	background-color: #1e5685;
+}
+.navbar-mine .navbar-toggle {
+	border-color: #1e5685;
+}
+.navbar-mine .navbar-toggle:hover, .navbar-mine .navbar-toggle:focus {
+	background-color: #1e5685;
+}
+.navbar-mine .navbar-toggle .icon-bar {
+	background-color: #eeeeee;
+}
+.navbar-mine .navbar-collapse,
+.navbar-mine .navbar-form {
+	border-color: #eeeeee;
+}
+.navbar-mine .navbar-link {
+	color: #eeeeee;
+}
+.navbar-mine .navbar-link:hover {
+	color: #dbefff;
+}
+
+@media (max-width: 767px) {
+	.navbar-mine .navbar-nav .open .dropdown-menu > li > a {
+		color: #eeeeee;
+	}
+	.navbar-mine .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-mine .navbar-nav .open .dropdown-menu > li > a:focus {
+	    background-color: #1e5685;    /*this too, same as above*/
+		color: #dbefff;
+	}
+	.navbar-mine .navbar-nav .open .dropdown-menu > .active > a, .navbar-mine .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-mine .navbar-nav .open .dropdown-menu > .active > a:focus {
+		color: #dbefff;
+		background-color: #1e5685;
+	}
+}

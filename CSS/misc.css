@@ -1,0 +1,4 @@
+body {
+    padding-top: 65px;    /* prostor za navbar-fixed-top, brez tega prekrije vsebino */
+    background: #eee;
+}
