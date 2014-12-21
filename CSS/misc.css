@@ -13,7 +13,18 @@ body {
     text-align: left;
 }
 
+#input-group-addon-user {
+    min-width: 120px;
+    text-align: left;
+}
+
 #countryList {
+    height: auto;
+    max-height: 300px;
+    overflow-x: hidden;
+}
+
+#meritveList {
     height: auto;
     max-height: 300px;
     overflow-x: hidden;

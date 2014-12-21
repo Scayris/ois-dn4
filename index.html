@@ -135,7 +135,7 @@
 			                       		</div>
 			                       		<div class="panel-body">
 			                       			<div class="input-group"><span class="input-group-addon" id="addonOs">EHR ID</span>
-			                       			<input type="text" class="form-control" id="osebniEHR"></div></br>
+			                       			<input type="text" class="form-control" id="osebniEHR" disabled></div></br>
 			                       			<div class="input-group"><span class="input-group-addon" id="addonOs">Ime</span>
 			                       			<input type="text" class="form-control" id="osebniIme"></div></br>
 			                       			<div class="input-group"><span class="input-group-addon" id="addonOs">Priimek</span>
@@ -155,7 +155,47 @@
 			                       		</div>
 			                       	</div><!--/opozorila-->
 			                    </div><!--/col-lg-6-->
-		                    </div>
+		                    </div><!--/podatki row-->
+		                    <div class="row">
+	            				<div class="col-lg-4 col-md-4 col-sm-4">
+	            					<div class="panel panel-default">
+			                       		<div class="panel-heading">
+			                       			Dodaj lastne meritve
+			                       		</div>
+			                       		<div class="panel-body">
+			                       			<div class="input-group"><span class="input-group-addon" ID="input-group-addon-user">Telesna teža</span>
+			                       			<input type="text" class="form-control" id="userTeza" placeholder="Teža v kilogramih"></div></br>
+			                       			<div class="input-group"><span class="input-group-addon" ID="input-group-addon-user">Datum meritve</span>
+			                       			<input type="text" class="form-control" id="userDatum" placeholder="YYYY-MM-DDThh:mm" title="YYYY-MM-DDThh:mm"></div></br>
+			                       			<div class=row>
+			                       				<div class="col-xs-8 col-sm-8 col-md-7 col-lg-9" id="confirmAddCol">
+			                       					
+			                       				</div>
+			                       				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+			                       					<a href="javascript:dodajPodatkeUser()" class="btn btn-primary" role="button">Dodaj</a>
+			                       				</div>
+			                       			</div>
+			                       		</div>
+			                       	</div>
+	                    		</div><!--/col-lg-4-->
+	                    		<div class="col-lg-4 col-md-4 col-sm-4">
+	            					<div class="panel panel-default">
+			                       		<div class="panel-heading">
+			                       			Pregled meritev
+			                       		</div>
+			                       		<div class="panel-body">
+			                       			<div class="panel-body">
+						    					<div class="list-group" id="meritveList">
+						    						
+						    					</div>
+						    				</div>
+			                       			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+			                       				<a href="javascript:poizvedbaAQL()" class="btn btn-primary" role="button">Posodobi</a>
+			                       			</div>
+			                       		</div>
+			                       	</div>
+			                    </div>
+	                    	</div><!--/samostojne row-->
 	                    </div>
 	                    <div class="panel-body" id="placeholderBody"> <!--HIDE THIS PART AFTER FIRST QUERY (add hidden)-->
 	                    	<div class="row"></div>
@@ -208,7 +248,7 @@
 						    				<div class="panel-body">
 						    					<div class="row">
 							    					<div class="col-sm-12 col-md-12 col-lg-12" id="maleResults">
-			    										<div class="list-group"">
+			    										<div class="list-group">
 								    						<a class="list-group-item">Izberite podatek.</a>
 								    					</div>
 			    									</div>

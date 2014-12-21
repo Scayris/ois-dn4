@@ -174,6 +174,71 @@ function dodajPodatke(ehrId, oseba){
     });
 }
 
+function dodajPodatkeUser(){
+    $.ajaxSetup({
+        headers: {
+            "Ehr-Session": getSessionId()
+        }
+    });
+    var compositionData = {
+        "ctx/time": $("#userDatum").val(),
+        "ctx/language": "en",
+        "ctx/territory": "SI",
+        "vital_signs/body_weight/any_event/body_weight": $("#userTeza").val(),
+    };
+    var queryParams = {
+        "ehrId": $("#osebniEHR").val(),
+        templateId: 'Vital Signs',
+        format: 'FLAT',
+        committer: 'user-'+$("#osebniEHR").val(),
+    };
+    $.ajax({
+        url: baseUrl + "/composition?" + $.param(queryParams),
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(compositionData),
+        success: function (data) {
+            $("#confirmAddCol").html('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Meritev uspešno dodana.</div>')
+        },
+        error: function (napaka) {
+            window.alert(JSON.parse("Prišlo je do napake: "+napaka.responseText).userMessage);
+        }
+    });
+}
+
+function poizvedbaAQL(){
+    var AQL = 
+		"select " +
+    		"a/data[at0002]/events[at0003]/time/value as measure_time, " +
+    		"a/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value as Body_weight, " +
+		"from EHR e[e/ehr_id/value='" + $("#osebniEHR").val() + "'] " +
+		"contains COMPOSITION a" +
+		"contains OBSERVATION a[openEHR-EHR-OBSERVATION.body_weight.v1] " +
+		"limit 10";
+    $.ajaxSetup({
+        headers: {
+            "Ehr-Session": getSessionId()
+        }
+    });
+    $.ajax({
+		url: baseUrl + "/query?" + $.param({"aql": AQL}),
+		type: 'GET',
+		success: function (data) {
+		    alert("We're in");
+		   	if (data.length > 0) {
+		   	    for (var i in data.resultSet){
+		    	    $("#meritveList").append('<a class="list-group-item">'+data.resultSet[i].measure_time+': '+data.resultSet[i].Body_weight+'kg</a>');
+		   	    }
+		   	} else {
+		   		window.alert("Meritve morate dodati preden jih lahko preglejujete.");
+		  	}
+		},
+		error: function (napaka) {
+                window.alert(JSON.parse("Prišlo je do napake: "+napaka.responseText).userMessage);
+        }
+	});
+}
+
 function poizvedba() {
     var ehrId = $("#poljePoizvedbeEHR").val();
     if(ehrId != ""){
