@@ -355,9 +355,9 @@ function generirajOpozorila(){
         if(bmiWarning1 == -1){
             seznam.append('<li class="list-group-item list-group-item-warning">Vaše meritve kažejo na podhranjenost. Prosimo, posvetujte se s svojim osebnim zdravnikom. </li>');
         } else if (bmiWarning1 == 1) {
-            seznam.append('<li class="list-group-item list-group-item-warning">Vaše meritve kažejo na povišano telesno težo. Svetujemo, da si ogledate <a href="/pages/bw.html">našo stran o samopomoči</a>.</li>');
+            seznam.append('<li class="list-group-item list-group-item-warning">Vaše meritve kažejo na povišano telesno težo. Svetujemo, da si ogledate <a href="/ois-dn4/pages/bw.html">našo stran o samopomoči</a>.</li>');
         } else if (bmiWarning1 == 2) {
-            seznam.append('<li class="list-group-item list-group-item-danger">Vaše meritve kažejo na močno povišano telesno težo. Prosimo, da se polek ogleda <a href="/pages/bw.html">naše strani o samopomoči</a> še posvetujete s svojim osebnim zdravnikom.</li>');
+            seznam.append('<li class="list-group-item list-group-item-danger">Vaše meritve kažejo na močno povišano telesno težo. Prosimo, da se polek ogleda <a href="/ois-dn4/pages/bw.html">naše strani o samopomoči</a> še posvetujete s svojim osebnim zdravnikom.</li>');
         }
         if (bmiWarning1>0 && fever1>0) {
             seznam.append('<li class="list-group-item list-group-item-warning">Ker vaše meritve kažejo na povišano telesno temperaturo, se pred začetkom kakršnekoli vadbe se posvetujte s svojim osebnim zdravnikom.</li>');
@@ -370,9 +370,9 @@ function generirajOpozorila(){
         if (bpWarning1 == -1) {
             seznam.append('<li class="list-group-item list-group-item-warning">Vaše meritve kažejo na prenizek krvni pritisk. Prosimo, posvetujte se s svojim osebnim zdravnikom.');
         } else if (bpWarning1 == 1) {
-            seznam.append('<li class="list-group-item list-group-item-warning">Vaše meritve kažejo na povišan krvni pritisk. Svetujemo, da si ogledate <a href="/pages/bp.html">našo stran o samopomoči</a>.</li>');
+            seznam.append('<li class="list-group-item list-group-item-warning">Vaše meritve kažejo na povišan krvni pritisk. Svetujemo, da si ogledate <a href="/ois-dn4/pages/bp.html">našo stran o samopomoči</a>.</li>');
         } else if (bpWarning1 == 2) {
-            seznam.append('<li class="list-group-item list-group-item-danger">Vaše meritve kažejo na močno povišan krvni pritisk. Prosimo, da se polek ogleda <a href="/pages/bp.html">naše strani o samopomoči</a> še posvetujete s svojim osebnim zdravnikom.</li>');
+            seznam.append('<li class="list-group-item list-group-item-danger">Vaše meritve kažejo na močno povišan krvni pritisk. Prosimo, da se polek ogleda <a href="/ois-dn4/pages/bp.html">naše strani o samopomoči</a> še posvetujete s svojim osebnim zdravnikom.</li>');
         }
     }
 }
