@@ -1,4 +1,4 @@
-/*made with: http://twbscolor.smarchal.com/; permalink: http://twbscolor.smarchal.com/scss?bd=337ab7&bh=1e5685&cd=eeeeee&ch=dbefff */
+/*made with: http://twbscolor.smarchal.com/; permalink: http://twbscolor.smarchal.com/scss?bd=337ab7&bh=1e5685&cd=eeeeee&ch=ffffff */
 .navbar-mine {
 	background-color: #337ab7;
 	border-color: #1e5685;
@@ -7,7 +7,7 @@
 	color: #eeeeee;
 }
 .navbar-mine .navbar-brand:hover, .navbar-mine .navbar-brand:focus {
-	color: #dbefff;
+	color: #ffffff;
 }
 .navbar-mine .navbar-text {
 	color: #eeeeee;
@@ -17,14 +17,14 @@
 }
 .navbar-mine .navbar-nav > li > a:hover, .navbar-mine .navbar-nav > li > a:focus {
     background-color: #1e5685;    /*this I had to add or else it all went straight to ugly-town on hover*/
-	color: #dbefff;
+	color: #ffffff;
 }
 .navbar-mine .navbar-nav > .active > a, .navbar-mine .navbar-nav > .active > a:hover, .navbar-mine .navbar-nav > .active > a:focus {
-	color: #dbefff;
+	color: #ffffff;
 	background-color: #1e5685;
 }
 .navbar-mine .navbar-nav > .open > a, .navbar-mine .navbar-nav > .open > a:hover, .navbar-mine .navbar-nav > .open > a:focus {
-	color: #dbefff;
+	color: #ffffff;
 	background-color: #1e5685;
 }
 .navbar-mine .navbar-toggle {
@@ -44,7 +44,7 @@
 	color: #eeeeee;
 }
 .navbar-mine .navbar-link:hover {
-	color: #dbefff;
+	color: #ffffff;
 }
 
 @media (max-width: 767px) {
@@ -53,10 +53,10 @@
 	}
 	.navbar-mine .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-mine .navbar-nav .open .dropdown-menu > li > a:focus {
 	    background-color: #1e5685;    /*this too, same as above*/
-		color: #dbefff;
+		color: #ffffff;
 	}
 	.navbar-mine .navbar-nav .open .dropdown-menu > .active > a, .navbar-mine .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-mine .navbar-nav .open .dropdown-menu > .active > a:focus {
-		color: #dbefff;
+		color: #ffffff;
 		background-color: #1e5685;
 	}
 }

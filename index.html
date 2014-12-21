@@ -56,8 +56,8 @@
 						</div>
 						<div class="panel-body">
 							<div class="row">
-								<div class="col-sm-1 col-md-1 col-lg-1"><a class="btn btn-info" href="javascript:helpAlert()" role="button">Help</a></div>
-								<div class="col-sm-11 col-md-11 col-lg-11">
+								<div class="col-md-1 col-lg-1"><a class="btn btn-info" href="javascript:helpAlert()" role="button">Help</a></div>
+								<div class="col-md-11 col-lg-11">
 									<div class="input-group">
 							    		<div class="input-group-btn">
 							        		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" id="izbiraOsebe">Ime <span class="caret"></span></button>
@@ -118,7 +118,7 @@
 			                       			<div class="input-group"><span class="input-group-addon" ID="input-group-addon-vit">Indeks telesne mase</span>
 			                       			<input type="text" class="form-control" id="vitalniBMI"></div></br>
 			                       			<div class="input-group"><span class="input-group-addon" ID="input-group-addon-vit">Telesna temperatura</span>
-			                       			<input type="text" class="form-control" id="vitalniTemperatura"><span class="input-group-addon">Bla</span></div></br>
+			                       			<input type="text" class="form-control" id="vitalniTemperatura"></div></br>
 			                       			<div class="input-group"><span class="input-group-addon" ID="input-group-addon-vit">Sistolični krvni tlak</span>
 			                       			<input type="text" class="form-control" id="vitalniSist"></div></br>
 			                       			<div class="input-group"><span class="input-group-addon" ID="input-group-addon-vit">Diastolični krvni tlak</span>
@@ -175,7 +175,51 @@
 		                   		<h3 class="panel-title">Prikaz državnih povprečij</h3>
 		    				</div>
 		    				<div class="panel-body">
-		    					Nuthin' yet.
+		    					<div class="row">
+		    						<div class="col-sm-4 col-md-4 col-lg-4">
+		    							<div class="panel panel-primary">
+						                 	<div class="panel-heading">
+						                   		<h3 class="panel-title">Države</h3>
+						    				</div>
+						    				<div class="panel-body">
+						    					<div class="list-group" id="countryList">
+						    						
+						    					</div>
+						    				</div>
+						    			</div>
+		    						</div>
+		    						<div class="col-sm-4 col-md-4 col-lg-4">
+		    							<div class="panel panel-primary">
+						                 	<div class="panel-heading">
+						                   		<h3 class="panel-title">Podatki</h3>
+						    				</div>
+						    				<div class="panel-body">
+						    					<div class="list-group" id="detailList">
+						    						<a class="list-group-item">Izberite državo.</a>
+						    					</div>
+						    				</div>
+						    			</div>
+		    						</div>
+		    						<div class="col-sm-4 col-md-4 col-lg-4">
+		    							<div class="panel panel-primary">
+						                 	<div class="panel-heading">
+						                   		<h3 class="panel-title">Rezultati</h3>
+						    				</div>
+						    				<div class="panel-body">
+						    					<div class="row">
+							    					<div class="col-sm-12 col-md-12 col-lg-12" id="maleResults">
+			    										<div class="list-group"">
+								    						<a class="list-group-item">Izberite podatek.</a>
+								    					</div>
+			    									</div>
+			    									<div class="col-sm-12 col-md-12 col-lg-12" id="femaleResults">
+			    										
+			    									</div>
+		    									</div>
+						    				</div>
+						    			</div>
+		    						</div>
+		    					</div>
 		    				</div>
 		    			</div>
 		    		</div>

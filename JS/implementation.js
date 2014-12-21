@@ -13,6 +13,9 @@ var fever=0;
 
 var visina=0;
 
+var countryDataJson;
+var countryDataJsonBP;
+
 //setterji, ker znotraj poizvedbe ne moreš spreminjati globalnih
 function setBMIwarning(warVal){
     bmiWarning=warVal;
@@ -25,6 +28,12 @@ function setFever(warVal){
 }
 function setVisina(warVal){
     visina=warVal;
+}
+function setCountryData(data){
+    countryDataJson = data;
+}
+function setCountryDataBP(data){
+    countryDataJsonBP = data;
 }
 
 //getterji
@@ -39,6 +48,12 @@ function getFever(){
 }
 function getVisina(){
     return visina;
+}
+function getCountryData(){
+    return countryDataJson;
+}
+function getCountryDataBP(){
+    return countryDataJsonBP;
 }
 
 function getSessionId() {
@@ -301,9 +316,62 @@ function helpAlert(){
     window.alert('Izberite osebo iz menija "Ime" v oknu "Generiraj osebo" in pritisnite "Generiraj" da prenesete njene podatke na EHRscape. Potem jih lahko v oknu "Prenos podatkov" od tam naložite za pregled.');
 }
 
+function grabWHOdata(){
+    $.ajax({
+        url: "http://apps.who.int/gho/athena/api/GHO/WHOSIS_000010.json?profile=simple",
+        dataType: 'jsonp',
+        success: function (countryData) {
+            setCountryData(countryData);
+            for(var i=0; i<(countryData.fact.length)/3-11; i++){
+                $("#countryList").append('<a class="list-group-item" href="javascript:countryClick(&quot;'+countryData.fact[i].COUNTRY+'&quot;);">'+countryData.fact[i].COUNTRY+'</a>');
+            }
+        }
+    });
+    $.ajax({
+        url: "http://apps.who.int/gho/athena/api/GHO/BP_02.json?profile=simple",
+        dataType: 'jsonp',
+        success: function (countryDataBP) {
+            setCountryDataBP(countryDataBP);
+        }
+    });
+}
+
+function countryClick(country){
+    $("#detailList").empty();
+    $("#detailList").append('<a class="list-group-item" href="javascript:filterDetailsBMI(&quot;'+country+'&quot;);">Odstotek ljudi nad 20, ki so predebeli</a>');
+    $("#detailList").append('<a class="list-group-item" href="javascript:filterDetailsBP(&quot;'+country+'&quot;);">Odstotek ljudi nad 20, ki imajo previsok krvni tlak</a>');
+}
+
+function filterDetailsBMI(country){
+    $.each(getCountryData().fact, function(i, el) {
+        if (el.COUNTRY == country) {
+            if (el.SEX == "Male") {
+                $("#maleResults").html('<div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Moški</h3></div><div class="panel-body">'+el.Value+'</div></div>');
+            }
+            if (el.SEX == "Female") {
+                $("#femaleResults").html('<div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Ženske</h3></div><div class="panel-body">'+el.Value+'</div></div>');
+            }
+        }
+    });
+}
+
+function filterDetailsBP(country){
+    $.each(getCountryDataBP().fact, function(i, el) {
+        if (el.COUNTRY == country) {
+            if (el.SEX == "Male") {
+                $("#maleResults").html('<div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Moški</h3></div><div class="panel-body">'+el.Value+'</div></div>');
+            }
+            if (el.SEX == "Female") {
+                $("#femaleResults").html('<div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Ženske</h3></div><div class="panel-body">'+el.Value+'</div></div>');
+            }
+        }
+    });
+}
+
 $(document).ready(function() {
     for (var i=1; i<=vrniOsebo(0); i++) {   //sestavi seznam oseb
         var oseba = vrniOsebo(i);
         $( "#meniOseb" ).append( "<li><a href='javascript:nastaviOsebo("+i+");'>"+oseba.ime+" "+oseba.priimek+"</a></li>" );
     }
+    grabWHOdata();
 });
