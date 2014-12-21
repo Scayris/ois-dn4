@@ -3,18 +3,16 @@
 	<head>
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	    <title>Zdravstvene grožnje moderne dobe</title>
-	    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>                         <!--jquery-->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">       <!--bootstrap CDN-->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"> <!--bootstrap tema-->
-	    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>					   <!--bootstrap javascript-->
-	    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">                     <!--bootstrap nastavitev za mobilne naprave, scalable=no ker prestavljanje elementov v navbaru zgleda grozno-->
-	    <style>
-	        
-	    </style>																								   <!--color theme: main #337AB7; selected #1e5685; bg #eeeeee;-->
-	    <script src="/JS/implementation.js"></script>                                                              <!--js datoteka-->
-	    <link rel="stylesheet" href="CSS/navbar-color.css"></link>                                                <!--css za navbar-->
-	    <link rel="stylesheet" href="CSS/misc.css"></link>                                           			   <!--preostali css-->
-	    <link rel="shortcut icon" href="https://i.imgur.com/UVoyCYD.png">										   <!--ikona za tab-->
+	    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>                      	<!--jquery-->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">    	<!--bootstrap CDN-->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">	<!--bootstrap tema-->
+	    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>						<!--bootstrap javascript-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">                  	<!--bootstrap nastavitev za mobilne naprave, scalable=no ker prestavljanje elementov v navbaru zgleda grozno-->
+	    																											<!--color theme: main #337AB7; selected #1e5685; bg #eeeeee;-->
+	    <script src="/JS/implementation.js"></script>                                                           	<!--js datoteka-->
+	    <link rel="stylesheet" href="CSS/navbar-color.css"></link>                                       			<!--css za navbar-->
+	    <link rel="stylesheet" href="CSS/misc.css"></link>                                           				<!--preostali css-->
+	    <link rel="shortcut icon" href="https://i.imgur.com/UVoyCYD.png">											<!--ikona za tab-->
 	</head>
 	<body>
 		<nav class="navbar navbar-mine navbar-fixed-top" role="navigation">
@@ -25,52 +23,164 @@
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>	<!--putting together the hamburger icon-->
 					</button>
-					<a class="navbar-brand" href="index.html">
+					<a class="navbar-brand" href="/index.html">
 						<img src="https://i.imgur.com/UVoyCYD.png" height="20" width="20">
 					</a>
-					<a class="hidden-xs hidden-sm navbar-brand" href="index.html">
+					<a class="hidden-xs hidden-sm navbar-brand" href="/index.html">
 						Zdravstvene grožnje moderne dobe
 					</a>
-					<a class="hidden-md hidden-lg navbar-brand" href="index.html">	<!--napis za male ekrane-->
+					<a class="hidden-md hidden-lg navbar-brand" href="/index.html">	<!--napis za male ekrane-->
 						Zdravstvene grožnje
 					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="main-nav-bar">
 					<ul class="nav navbar-nav">
-						<li class="divider"></li>
-						<li><a href="#">Link</a></li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Samopomoč <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li class="divider"></li>
-								<li><a href="#">Separated link</a></li>
-								<li class="divider"></li>
-								<li><a href="#">One more separated link</a></li>
+								<li><a href="/pages/bw.html">Prekomerna teža</a></li>
+								<li><a href="/pages/bp.html">Visok krvni tlak</a></li>
 							</ul>
 						</li>
+						<li><a href="pages/about.html">O nas</a></li>
 					</ul>
 				</div>
 		 	</div>	
 		</nav>
 	    <div class="container-fluid">   <!--container, ki pokrije celo širino strani. padding za vsebino po straneh, 12 stolpcev-->
             <div class="row">
-                 <div class="col-md-12">
-                    
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            Omehgerd a panel!
-                        </div>
-                    </div>
-	             </div>
-            </div>
+               	<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">Generiranje osebe</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-sm-1 col-md-1 col-lg-1"><a class="btn btn-info" href="javascript:helpAlert()" role="button">Help</a></div>
+								<div class="col-sm-11 col-md-11 col-lg-11">
+									<div class="input-group">
+							    		<div class="input-group-btn">
+							        		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" id="izbiraOsebe">Ime <span class="caret"></span></button>
+							        		<ul class="dropdown-menu" role="menu" id="meniOseb">
+							        			<!--nedodane osebe se pojavijo tu-->
+							      			</ul>
+							      		</div><!-- /btn-group -->
+							    		<input type="text" class="form-control" placeholder="Ime in priimek osebe" id="poljeIzbireOsebe" disabled>
+							    		<div class="input-group-btn">
+							    			<a class="btn btn-primary" href="javascript:generirajOsebo()">Generiraj</a>
+							    		</div>
+							    	</div><!-- /input-group -->
+						    	</div>
+					    	</div>
+						</div>
+					</div>
+				</div><!-- /col-lg-6 -->
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">Prenos podatkov</h3>
+						</div>
+						<div class="panel-body">
+					    	<div class="input-group">
+					    		<div class="input-group-btn">
+					        		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Ime <span class="caret"></span></button>
+					        		<ul class="dropdown-menu" role="menu" id="meniDodanihOseb">
+					        			<!--seznam dodanih oseb-->
+					      			</ul>
+					      		</div><!-- /btn-group -->
+					    		<input type="text" class="form-control" placeholder="EHR ID" id="poljePoizvedbeEHR" disabled>
+					    		<div class="input-group-btn">
+					    			<a class="btn btn-primary" href="javascript:poizvedba()">Poizvedi</a>
+					    		</div>
+					    	</div><!-- /input-group -->
+						</div>
+					</div>
+				</div><!-- /col-lg-6 -->
+			</div>
+	 		<div class="row">
+	            <div class="col-lg-12 col-md-12 col-sm-12">
+	                <div class="panel panel-primary">
+	                 	<div class="panel-heading">
+	                   		<h3 class="panel-title">Prikaz podatkov</h3>
+	    				</div>
+	            		<div class="panel-body" id="dataBody" hidden> <!--UNHIDE THIS PART BEFORE FIRST QUERY (remove hidden)-->
+	            			<div class="row">
+	            				<div class="col-lg-6 col-md-6 col-sm-6">
+			                       	<div class="panel panel-default">
+			                       		<div class="panel-heading">
+			                       			Vitalni znaki
+			                       		</div>
+			                       		<div class="panel-body">
+			                       			<div class="input-group"><span class="input-group-addon" ID="input-group-addon-vit">Višina</span>
+			                       			<input type="text" class="form-control" id="vitalniVisina"></div></br>
+			                       			<div class="input-group"><span class="input-group-addon" ID="input-group-addon-vit">Telesna teža</span>
+			                       			<input type="text" class="form-control" id="vitalniTeza"></div></br>
+			                       			<div class="input-group"><span class="input-group-addon" ID="input-group-addon-vit">Indeks telesne mase</span>
+			                       			<input type="text" class="form-control" id="vitalniBMI"></div></br>
+			                       			<div class="input-group"><span class="input-group-addon" ID="input-group-addon-vit">Telesna temperatura</span>
+			                       			<input type="text" class="form-control" id="vitalniTemperatura"><span class="input-group-addon">Bla</span></div></br>
+			                       			<div class="input-group"><span class="input-group-addon" ID="input-group-addon-vit">Sistolični krvni tlak</span>
+			                       			<input type="text" class="form-control" id="vitalniSist"></div></br>
+			                       			<div class="input-group"><span class="input-group-addon" ID="input-group-addon-vit">Diastolični krvni tlak</span>
+			                       			<input type="text" class="form-control" id="vitalniDiast"></div></br>
+			                       			<div class="input-group"><span class="input-group-addon" ID="input-group-addon-vit">Datum zadnje meritve</span>
+			                       			<input type="text" class="form-control" id="vitalniDatum"></div></br>
+			                       		</div>
+			                       	</div>
+			                    </div><!--/vitalni znaki col-lg-6-->
+	            				<div class="col-lg-6 col-md-6 col-sm-6">
+			                       	<div class="panel panel-default">
+			                       		<div class="panel-heading">
+			                       			Osebni podatki
+			                       		</div>
+			                       		<div class="panel-body">
+			                       			<div class="input-group"><span class="input-group-addon" id="addonOs">EHR ID</span>
+			                       			<input type="text" class="form-control" id="osebniEHR"></div></br>
+			                       			<div class="input-group"><span class="input-group-addon" id="addonOs">Ime</span>
+			                       			<input type="text" class="form-control" id="osebniIme"></div></br>
+			                       			<div class="input-group"><span class="input-group-addon" id="addonOs">Priimek</span>
+			                       			<input type="text" class="form-control" id="osebniPriimek"></div></br>
+			                       			<div class="input-group"><span class="input-group-addon" id="addonOs">Rojstni datum</span>
+			                       			<input type="text" class="form-control" id="osebniDatumRojstva"></div></br>
+			                       		</div>
+			                       	</div><!--/osebni podatki-->
+			                       	<div class="panel panel-info">
+			                       		<div class="panel-heading">
+			                       			Opozorila
+			                       		</div>
+			                       		<div class="panel-body">
+			                       			<ul class="list-group" id="opozorila">
+			                       				
+			                       			</ul>
+			                       		</div>
+			                       	</div><!--/opozorila-->
+			                    </div><!--/col-lg-6-->
+		                    </div>
+	                    </div>
+	                    <div class="panel-body" id="placeholderBody"> <!--HIDE THIS PART AFTER FIRST QUERY (add hidden)-->
+	                    	<div class="row"></div>
+	                    		<div class="col-lg-4 col-md-4 col-sm-4 col-lg-offset-4 col-md-offset-4 col-sm-offset-4"></br>
+	                    			<div class="alert alert-info" role="alert">
+	                    				<b>Ni podatkov za prikaz.</b> Prosimo, izberite osebo, katere podatke želite pregledati.
+	                    			</div>
+	                    		</div>
+	                    	</div>
+	                    </div>
+	                </div><!--/panel-primary-->
+	            </div>
+		        <div class="row">
+		            <div class="col-lg-12">
+		                <div class="panel panel-primary">
+		                 	<div class="panel-heading">
+		                   		<h3 class="panel-title">Prikaz državnih povprečij</h3>
+		    				</div>
+		    				<div class="panel-body">
+		    					Nuthin' yet.
+		    				</div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    </div>
 	    </div>
-	    
 	</body>
 </html>
